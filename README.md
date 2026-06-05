@@ -893,7 +893,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
       <a href="mailto:sanchezmitch77@email.com" class="btn btn-accent">email me →</a>
       <a href="https://linkedin.com/in/michelle29" class="btn btn-ghost" target="_blank">LinkedIn ↗</a>
       <a href="https://github.com/mitchsanchez29" class="btn btn-ghost" target="_blank">GitHub ↗</a>
-      <a href="https://onlinejobs.ph/jobseekers/1257742" class="btn btn-ghost" target="_blank">OnlineJobs.ph ↗</a>
+      <a href="https://v2.onlinejobs.ph/jobseekers/1257742" class="btn btn-ghost" target="_blank">OnlineJobs.ph ↗</a>
     </div>
   </div>
 </section>
