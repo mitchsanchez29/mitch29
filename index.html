@@ -547,7 +547,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
   </div>
   <div class="hero-stats">
     <div>
-      <div class="stat-num">7<span>+</span></div>
+      <div class="stat-num">9<span>+</span></div>
       <div class="stat-label">// automation projects</div>
     </div>
     <div>
@@ -555,7 +555,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
       <div class="stat-label">// tools & APIs</div>
     </div>
     <div>
-      <div class="stat-num">3<span>+</span></div>
+      <div class="stat-num">5<span>+</span></div>
       <div class="stat-label">// reporting dashboards</div>
     </div>
   </div>
@@ -627,35 +627,61 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
       </div>
     </div>
 
-    <!-- 3. Ads + Looker Studio - WIDE -->
-    <div class="project-card c-amber wide">
+    <!-- 3. Facebook Ads Dashboard -->
+    <div class="project-card c-blue">
       <div class="card-top">
-        <div class="card-icon">📈</div>
+        <div class="card-icon">📱</div>
         <span class="card-role">sole builder</span>
       </div>
-      <div class="card-title">Facebook & Google Ads Marketing Performance Dashboard</div>
+      <div class="card-title">Facebook Ads Performance Dashboard</div>
       <div class="flow">
         <span class="flow-node">Facebook Ads</span>
         <span class="flow-arrow">→</span>
-        <span class="flow-node">Google Ads</span>
+        <span class="flow-node">OAuth Token</span>
         <span class="flow-arrow">→</span>
-        <span class="flow-node">Looker Studio Connectors</span>
+        <span class="flow-node">Partner Connector</span>
         <span class="flow-arrow">→</span>
-        <span class="flow-node">Live Dashboard</span>
+        <span class="flow-node">Looker Studio</span>
       </div>
       <div class="card-desc">
-        Built a consolidated marketing performance dashboard in Looker Studio connecting both Facebook Ads and Google Ads data sources. Provides real-time visibility into campaign spend, reach, conversions, and ROAS — replacing manual reporting and delivering a single source of truth for marketing decisions.
+        Connected Facebook Ads to Looker Studio via OAuth token and partner connector. Live dashboard shows campaign spend, reach, CPM, CTR, and results — no manual exports needed.
       </div>
       <div class="tags">
-        <span class="tag amber">Facebook Ads</span>
-        <span class="tag amber">Google Ads</span>
+        <span class="tag blue">Facebook Ads API</span>
+        <span class="tag">OAuth Token</span>
         <span class="tag">Looker Studio</span>
-        <span class="tag">Data Connectors</span>
         <span class="tag">Marketing Analytics</span>
       </div>
     </div>
 
-    <!-- 4. Airtable / Zapier -->
+    <!-- 4. Google Ads + Analytics Dashboard -->
+    <div class="project-card c-amber">
+      <div class="card-top">
+        <div class="card-icon">📈</div>
+        <span class="card-role">sole builder</span>
+      </div>
+      <div class="card-title">Google Ads & Analytics Performance Report</div>
+      <div class="flow">
+        <span class="flow-node">Google Ads</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Google Analytics</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Native Connectors</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Looker Studio</span>
+      </div>
+      <div class="card-desc">
+        Multi-page Looker Studio report connected to Google Ads and Analytics via native connectors. Features Week-over-Week, Month-over-Month, and Year-to-Date views across separate report pages.
+      </div>
+      <div class="tags">
+        <span class="tag amber">Google Ads</span>
+        <span class="tag">Google Analytics</span>
+        <span class="tag">Looker Studio</span>
+        <span class="tag">WoW · MoM · YTD</span>
+      </div>
+    </div>
+
+    <!-- 5. Airtable / Zapier -->
     <div class="project-card c-purple">
       <div class="card-top">
         <div class="card-icon">🗂️</div>
@@ -672,7 +698,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
         <span class="flow-node">Looker Studio</span>
       </div>
       <div class="card-desc">
-        My role: daily monitoring, data cleaning, and structuring of EOD sales data (cash collected, payments) submitted by closers and setters, then building and maintaining the Looker Studio performance report.
+        My role: daily monitoring, data cleaning, and structuring of EOD sales data (cash collected, payments, commissions) submitted by closers and setters — then building and maintaining the Looker Studio performance report.
       </div>
       <div class="tags">
         <span class="tag">Airtable</span>
@@ -683,7 +709,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
       </div>
     </div>
 
-    <!-- 5. Payment Tracker -->
+    <!-- 6. Upcoming & Delayed Payments Tracker -->
     <div class="project-card c-coral">
       <div class="card-top">
         <div class="card-icon">💰</div>
@@ -691,27 +717,78 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
       </div>
       <div class="card-title">Upcoming & Delayed Payments Tracker</div>
       <div class="flow">
-        <span class="flow-node">Raw Data</span>
+        <span class="flow-node">Installment Tracker</span>
         <span class="flow-arrow">→</span>
-        <span class="flow-node">Apps Script merge</span>
+        <span class="flow-node">Apps Script</span>
         <span class="flow-arrow">→</span>
-        <span class="flow-node">Clean Tracker</span>
+        <span class="flow-node">Upcoming / Delayed</span>
         <span class="flow-arrow">→</span>
-        <span class="flow-node">Looker Studio</span>
+        <span class="flow-node">Slack + Looker Studio</span>
       </div>
       <div class="card-desc">
-        Used Google Apps Script to clean and merge payment data from multiple sources into a structured tracker flagging upcoming and overdue payments. Looker Studio report gives management real-time payment status visibility.
+        Apps Script reads the master installment tracker, calculates payment aging, and auto-routes clients: 0–90 days due → Upcoming sheet, 1+ days overdue → Delayed sheet + Slack follow-up alert. Paid entries are auto-removed. Two separate Looker Studio dashboards for each sheet.
       </div>
       <div class="tags">
         <span class="tag accent">Apps Script</span>
-        <span class="tag">Data Merging</span>
+        <span class="tag">Slack Webhook</span>
         <span class="tag">Looker Studio</span>
+        <span class="tag">Aging Logic</span>
         <span class="tag">Finance</span>
       </div>
     </div>
 
-    <!-- 6. Webhook & Notifications -->
+    <!-- 7. Payment Performance Dashboard -->
     <div class="project-card c-teal">
+      <div class="card-top">
+        <div class="card-icon">📊</div>
+        <span class="card-role">sole builder</span>
+      </div>
+      <div class="card-title">Payment Performance Dashboard</div>
+      <div class="flow">
+        <span class="flow-node">Payment Tracker</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Google Sheets</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Looker Studio</span>
+      </div>
+      <div class="card-desc">
+        Looker Studio dashboard using a Google Sheets payment tracker as data source. Visualizes total payments, collected amounts, pending balances, and payment status — centralized, real-time, no manual checking needed.
+      </div>
+      <div class="tags">
+        <span class="tag">Looker Studio</span>
+        <span class="tag">Google Sheets</span>
+        <span class="tag">Financial Reporting</span>
+        <span class="tag">Data Visualization</span>
+      </div>
+    </div>
+
+    <!-- 8. Financial Dashboard & P&L -->
+    <div class="project-card c-green">
+      <div class="card-top">
+        <div class="card-icon">📉</div>
+        <span class="card-role">sole builder</span>
+      </div>
+      <div class="card-title">Financial Dashboard & Profit/Loss Reporting</div>
+      <div class="flow">
+        <span class="flow-node">Income + Expenses</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Google Sheets</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">P&L Dashboard</span>
+      </div>
+      <div class="card-desc">
+        Google Sheets dashboard consolidating income, expenses, net cash collected, and profit/loss. Monthly and quarterly performance tracking with automated calculations — business performance visible in one place.
+      </div>
+      <div class="tags">
+        <span class="tag accent">Google Sheets</span>
+        <span class="tag">P&L Reporting</span>
+        <span class="tag">Monthly · Quarterly</span>
+        <span class="tag">Financial Dashboard</span>
+      </div>
+    </div>
+
+    <!-- 9. Webhook & Notifications -->
+    <div class="project-card c-red">
       <div class="card-top">
         <div class="card-icon">🔔</div>
         <span class="card-role">sole builder</span>
@@ -737,8 +814,8 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
       </div>
     </div>
 
-    <!-- 7. AI Workflows -->
-    <div class="project-card c-red">
+    <!-- 10. AI Workflows -->
+    <div class="project-card c-purple">
       <div class="card-top">
         <div class="card-icon">🤖</div>
         <span class="card-role">in development</span>
@@ -802,8 +879,9 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
         <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>Looker Studio</div>
         <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>Data Cleaning</div>
         <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>Data Merging</div>
+        <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>Financial Reporting</div>
+        <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>P&L Dashboards</div>
         <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>CRM Automation</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>Airtable</div>
         <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>Workflow Automation</div>
       </div>
     </div>
@@ -816,11 +894,13 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
       <span class="tool-pill">Zapier</span>
       <span class="tool-pill">Slack</span>
       <span class="tool-pill">Google Ads</span>
+      <span class="tool-pill">Facebook Ads</span>
       <span class="tool-pill">Airtable</span>
       <span class="tool-pill">PDF Generation</span>
       <span class="tool-pill">Google Drive API</span>
       <span class="tool-pill">Looker Studio Connectors</span>
       <span class="tool-pill">UrlFetchApp</span>
+      <span class="tool-pill">ChatGPT API</span>
     </div>
   </div>
 </section>
@@ -871,7 +951,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
         <span class="meta-icon">📡</span>
         <div>
           <div class="meta-label">PLATFORMS</div>
-          <div class="meta-value">OnlineJobs.ph · Upwork · LinkedIn</div>
+          <div class="meta-value">OnlineJobs.ph · Upwork</div>
         </div>
       </div>
     </div>
@@ -890,10 +970,10 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
     <h2>Let's build something automated.</h2>
     <p>Available for freelance projects, VA roles, and automation consulting. Based in the Philippines — remote-ready worldwide.</p>
     <div class="contact-links">
-      <a href="mailto:sanchezmitch77@email.com" class="btn btn-accent">email me →</a>
-      <a href="https://linkedin.com/in/michelle29" class="btn btn-ghost" target="_blank">LinkedIn ↗</a>
+      <a href="mailto:sanchezmitch77@gmail.com" class="btn btn-accent">email me →</a>
+      <a href="https://mitchsanchez29.github.io/automation-portfolio/" class="btn btn-ghost" target="_blank">Portfolio ↗</a>
       <a href="https://github.com/mitchsanchez29" class="btn btn-ghost" target="_blank">GitHub ↗</a>
-      <a href="https://v2.onlinejobs.ph/jobseekers/info/1257742" class="btn btn-ghost" target="_blank">OnlineJobs.ph ↗</a>
+      <a href="https://onlinejobs.ph/jobseekers/yourprofile" class="btn btn-ghost" target="_blank">OnlineJobs.ph ↗</a>
     </div>
   </div>
 </section>
