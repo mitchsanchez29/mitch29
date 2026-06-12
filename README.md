@@ -915,15 +915,18 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
 
   <div class="about-grid">
     <div class="about-text">
-      <p>
-        I'm <strong>Michelle</strong>, a Google Workspace Automation & API Integration Specialist based in the Philippines. I turn repetitive manual tasks into reliable automated systems — so teams can focus on what actually matters.
-      </p>
-      <p>
-        My work spans the full automation stack: from building <strong>Google Apps Script pipelines</strong> that generate PDFs and send emails, to connecting <strong>third-party APIs</strong> like YouTube Analytics and ChatGPT, to building <strong>Looker Studio dashboards</strong> that give decision-makers clear, real-time reporting.
-      </p>
-      <p>
-        I also bring a strong eye for <strong>data quality</strong> — cleaning, merging, and structuring messy datasets before they hit any report. Clean data in, trustworthy insights out.
-      </p>
+    
+     <p>
+  I'm <strong>Michelle</strong>, a Google Workspace Automation & Integration Specialist based in the Philippines. I help businesses eliminate manual work by building automated systems that improve efficiency, accuracy, and reporting.
+</p>
+
+<p>
+  I design and develop end-to-end automation using <strong>Google Apps Script</strong>, <strong>APIs</strong>, and workflow tools to connect systems, automate processes, and reduce repetitive tasks. This includes automated email systems, document generation, CRM workflows, and data synchronization.
+</p>
+
+<p>
+  I also specialize in <strong>Looker Studio dashboards</strong> and reporting systems that turn raw data into clear, actionable insights for decision-making. Before building reports, I ensure data is properly cleaned, structured, and reliable.
+</p>
     </div>
     <div class="about-meta">
       <div class="meta-item">
